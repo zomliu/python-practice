@@ -31,3 +31,15 @@ c = Customer()
 print('type(Customer())', type(c))
 c.method_1()
 print(c.method_2(1, 2))
+
+
+# 动态生成类
+print('---' * 3)
+def p1(self):
+    print("p1")
+
+Class_A = type('Class_A', (), {'field_name': 'f_name', 'p1': p1})
+
+ca = Class_A()
+print(ca.field_name)
+ca.p1()

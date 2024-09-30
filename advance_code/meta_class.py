@@ -15,7 +15,7 @@ class MyMeta(type):
                 setattr(clzz, key, value)
         return clzz
     
-class MyClass(metaclass=MyMeta, class_name='MyClass'):
+class MyClass(metaclass=MyMeta, class_name='custom-class-name'):
     pass
 
 mc = MyClass()
